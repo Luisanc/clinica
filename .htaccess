@@ -1,0 +1,6 @@
+
+ReWriteEngine On
+RewriteCond $1 !^(index\.php|robots\.txt)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+ReWriteRule ^(.*)$ index.php?url=$1
